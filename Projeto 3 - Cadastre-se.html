@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Cadastre-se</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		input[type=text],
+		select {
+			width: 100%;
+			padding: 10px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 2px solid #ffb366;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		.button {
+			background-color: #ffb366;
+			border: none;
+			color: white;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 14px;
+			margin: 4px 2px;
+			transition-duration: 0.3s;
+			cursor: pointer;
+		}
+
+		.button1 {
+			background-color: #fff0e6;
+			color: #800;
+			border: 2px solid #ffb366;
+		}
+
+		.button1:hover {
+			background-color: #ffb366;
+			color: #800;
+		}
+		}
+
+		div {
+			border-radius: 7px;
+			background-color: #fff0e6;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<h1>BRIGADEIRO GOURMET</h1>
+
+	</div>
+
+
+	<ul>
+		<li><a class="active" href="index.html">HOME</a></li>
+		<li><a href="Receita.html">RECEITA</a></li>
+		<li><a href="Sugestões.html">SUGESTÕES</a></li>
+		<li><a href="Cadastre-se.html">CADASTRE-SE</a></li>
+	</ul>
+
+	<div class="row">
+		<div class="card">
+			<h2> FAÇA SEU CADASTRO: </h2>
+			<h3 style="background-color:#ffb366;"> TENHA ACESSSO A MAIS RECEITAS: </h3>
+
+			<form action="/action_page.php">
+				<label for="nome">PRIMEIRO NOME</label>
+				<input type="text" id="nome" name="firstname" placeholder="Seu primeiro nome..">
+
+				<label for="nome">ÚLTIMO NOME</label>
+				<input type="text" id="nome" name="lastname" placeholder="Seu sobrenome..">
+
+				<label for="nome">E-MAIL</label>
+				<input type="text" id="nome" name="email" placeholder="Seu e-mail..">
+
+				<label for="receitas">GOSTARIA DE MAIS...</label>
+				<select id="receita" name="receita">
+					<option value="doce">Receitas Doces</option>
+					<option value="salgada">Receitas Salgadas</option>
+
+				</select>
+				<button class="button button1"> Enviar </button>
+
+			</form>
+			<div class="footer">
+				<h3><i>O MELHOR BRIGADEIRO GOURMET</i></h3>
+			</div>
+
+</body>
+
+</html>

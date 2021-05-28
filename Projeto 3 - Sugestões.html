@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Sugestões</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		.container {
+			display: block;
+			position: relative;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			cursor: pointer;
+			font-size: 18px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		/* Ocultar o botão de opção do navegador */
+		.container input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		/* Botão de opção personalizado */
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 16px;
+			width: 16px;
+			background-color: #eee;
+			border-radius: 50%;
+		}
+
+		/* Ao passar o mouse add uma cor de fundo */
+		.container:hover input~.checkmark {
+			background-color: #ffb366;
+		}
+
+		/* Quando o botão de opção estiver marcado add uma cor de fundo */
+		.container input:checked~.checkmark {
+			background-color: #800;
+		}
+
+		/* Criar o indicador (ponto /circulo - quando não estiver marcado) */
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+
+		/* Mostra o indicador (ponto/circulo) quando marcado */
+		.container input:checked~.checkmark:after {
+			display: block;
+		}
+
+		/* Estliza o indicador (ponto/circulo) */
+		.container .checkmark:after {
+			top: 6px;
+			left: 6px;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background: white;
+		}
+
+		textarea {
+			width: 100%;
+			height: 150px;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border: 2px solid #ffb366;
+			border-radius: 4px;
+			background-color: #fff0e6;
+			font-size: 16px;
+			resize: none;
+		}
+
+		.button {
+			background-color: #ffb366;
+			border: none;
+			color: white;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 14px;
+			margin: 4px 2px;
+			transition-duration: 0.3s;
+			cursor: pointer;
+		}
+
+		.button1 {
+			background-color: #fff0e6;
+			color: #800;
+			border: 2px solid #ffb366;
+		}
+
+		.button1:hover {
+			background-color: #ffb366;
+			color: #800;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="header">
+		<h1>BRIGADEIRO GOURMET</h1>
+
+	</div>
+
+	<ul>
+		<li><a class="active" href="index.html">HOME</a></li>
+		<li><a href="Receita.html">RECEITA</a></li>
+		<li><a href="Sugestões.html">SUGESTÕES</a></li>
+		<li><a href="Cadastre-se.html">CADASTRE-SE</a></li>
+	</ul>
+
+	<div class="row">
+		<div class="card">
+			<h2> DEIXE SUA SUGESTÃO: </h2>
+
+			<h3 style="background-color:#ffb366;"> O QUE VOCÊ ACHOU DA RECEITA DO BRIGADEIRO: </h3>
+
+			<label class="container"> Excelente
+				<input type="radio" checked="checked" name="radio">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container"> Bom
+				<input type="radio" name="radio">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container"> Regular
+				<input type="radio" name="radio">
+				<span class="checkmark"></span>
+			</label>
+			<label class="container"> Ruim
+				<input type="radio" name="radio">
+				<span class="checkmark"></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="card">
+		<h3 style="background-color:#ffb366;"> DEIXE AQUI SUA RECEITA PARA QUE SEJA APRESENTADA EM NOSSO SITE: </h3>
+
+		<form>
+			<textarea>Deixe aqui sua receita...</textarea>
+			<button class="button button1"> Enviar </button>
+		</form>
+
+		<div class="footer">
+			<h3><i>O MELHOR BRIGADEIRO GOURMET</i></h3>
+		</div>
+
+</body>
+
+</html>
